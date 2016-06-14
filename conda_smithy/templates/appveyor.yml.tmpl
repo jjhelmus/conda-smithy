@@ -24,7 +24,7 @@ environment:
   matrix:
   {%- for case in matrix %}
     {%- for dep_name, version in case %}
-    {% if loop.first %}- {% else %}  {% endif %}{{ dep_name }}: {{version }}
+    {% if loop.first %}- {% else %}  {% endif %}{{ dep_name }}: "{{version }}"
     {%- endfor %}
 {% endfor %}
 
